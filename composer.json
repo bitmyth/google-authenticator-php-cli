@@ -1,0 +1,19 @@
+{
+    "name": "gsh/google-authenticator",
+    "authors": [
+        {
+            "name": "gsh",
+            "email": "bitmyth@outlook.com"
+        }
+    ],
+    "require": {
+        "phpgangsta/googleauthenticator": "@dev"
+    },
+	"repositories": {
+		"packagist": {
+			"type": "vcs",
+			"url": "https://github.com/PHPGangsta/GoogleAuthenticator"
+		}
+	}
+
+}
