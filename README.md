@@ -1,2 +1,4 @@
-# google-authenticator-php-demo
-composer require phpgangsta/googleauthenticator:@dev
+# google-authenticator-php-cli
+
+mv mfa.phar /bin/mfa
+chmod +x /bin/mfa
