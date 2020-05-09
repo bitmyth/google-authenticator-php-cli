@@ -1,6 +1,13 @@
 {
-  "files": [
-    ""
+  "finder": [
+    {
+      "name": "*.php",
+      "exclude": [
+        "tests",
+        "yaml"
+      ],
+      "in": "vendor"
+    }
   ],
   "main": "mfa",
   "output": "mfa.phar",
