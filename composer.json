@@ -1,5 +1,6 @@
 {
   "name": "bitmyth/google-authenticator-php-cli",
+  "license": "MIT",
   "authors": [
     {
       "name": "gsh",
