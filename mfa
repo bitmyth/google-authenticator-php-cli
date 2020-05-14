@@ -14,7 +14,7 @@ $ga = new PHPGangsta_GoogleAuthenticator();
 $config = getenv('MFA_CONFIG_FILE');
 if (!$config) {
     $homedir = trim(`cd ~ && pwd`);
-    $config = $homedir . DIRECTORY_SEPARATOR . '.mfa2';
+    $config = $homedir . DIRECTORY_SEPARATOR . '.mfa';
 }
 
 $secrets = [];
