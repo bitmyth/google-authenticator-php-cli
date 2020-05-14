@@ -1,10 +1,10 @@
 #! /usr/local/opt/php@7.2/bin/php
 <?php
-if(file_exists(__DIR__ . '/vendor/autoload.php')){
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
     require(__DIR__ . '/vendor/autoload.php');
 }
 
-if(file_exists(__DIR__ . '/../../autoload.php')){
+if (file_exists(__DIR__ . '/../../autoload.php')) {
     require(__DIR__ . '/../../autoload.php');
 }
 
@@ -14,12 +14,16 @@ $ga = new PHPGangsta_GoogleAuthenticator();
 $config = getenv('MFA_CONFIG_FILE');
 if (!$config) {
     $homedir = trim(`cd ~ && pwd`);
-    $config = $homedir . DIRECTORY_SEPARATOR . '.mfa';
+    $config = $homedir . DIRECTORY_SEPARATOR . '.mfa2';
 }
 
 $secrets = [];
 
-$mfaSecrets = file_get_contents($config);
+if (file_exists($config)) {
+    $mfaSecrets = file_get_contents($config);
+} else {
+    $mfaSecrets = 'demo = SECRET';
+}
 
 foreach (array_filter(explode(PHP_EOL, $mfaSecrets)) as $secret) {
     $parts = explode('=', $secret);
